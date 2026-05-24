@@ -1,0 +1,16 @@
+/* ═══════════════════════════════════════════
+   CourseCard
+═══════════════════════════════════════════ */
+
+.card {
+  transition:
+    transform 200ms var(--m-ease),
+    box-shadow 200ms var(--m-ease),
+    border-color 200ms var(--m-ease) !important;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--m-shadow-lg) !important;
+  border-color: var(--m-border-accent) !important;
+}

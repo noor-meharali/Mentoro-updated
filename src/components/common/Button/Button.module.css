@@ -1,0 +1,65 @@
+/* ═══════════════════════════════════════════
+   Button — Polished SaaS button styles
+═══════════════════════════════════════════ */
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border-radius: var(--m-r-pill);
+  font-weight: 600;
+  font-size: 0.875rem;
+  letter-spacing: 0.01em;
+  min-height: 2.75rem;
+  width: 100%;
+  padding: 0.6875rem 1.5rem;
+  cursor: pointer;
+  border: none;
+  transition:
+    transform 180ms var(--m-ease),
+    background-color 180ms var(--m-ease),
+    box-shadow 180ms var(--m-ease),
+    filter 180ms var(--m-ease);
+  position: relative;
+  overflow: hidden;
+}
+
+.primary {
+  background: var(--m-accent);
+  color: #020d1a;
+  box-shadow: 0 2px 14px rgba(34, 211, 238, 0.30);
+}
+
+.primary:hover:not(:disabled) {
+  filter: brightness(1.08);
+  box-shadow: 0 4px 22px rgba(34, 211, 238, 0.42);
+  transform: translateY(-1px);
+}
+
+.secondary {
+  background: var(--m-surface-hover);
+  border: 1px solid var(--m-border);
+  color: var(--m-text);
+}
+
+.secondary:hover:not(:disabled) {
+  background: var(--m-surface-hover);
+  border-color: var(--m-border-strong);
+  color: var(--m-text-strong);
+  transform: translateY(-1px);
+}
+
+.button:active:not(:disabled) {
+  transform: scale(0.97) !important;
+}
+
+@media (min-width: 640px) {
+  .button { width: auto; }
+}
+
+.button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+  transform: none !important;
+}
